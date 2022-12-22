@@ -1,44 +1,56 @@
-# Automate creating a custom HTTP header response, but with Puppet:
+#!/usr/bin/env bash
+# Automate the task to create a custom HTT header response with Puppet
 
-# Pupper manifet to install nginx and others requirements
-
-$link = 'https://www.youtube.com/watch?v=QH2-TGUlwu4'
-$redirect = "\trewrite ^/redirect_me/$ ${link} permanent;"
-$custom_header = "add_header X-Served-By ${hostname};"
-
-exec { 'update packages':
-  command => '/usr/bin/apt-get update',
+exec { 'nginx install':
+path    => '/usr/bin',
+command => 'sudo apt update && sudo apt-get -y install nginx',
 }
 
-exec { 'restart nginx':
-  command => '/usr/sbin/service nginx restart',
-  require => Package['nginx']
+exec { 'Make directories':
+path    => '/usr/bin',
+command => 'sudo mkdir -p /var/www/html && sudo chown -R "$USER":"$USER" /var/www/html',
 }
 
--> package { 'nginx':
-  ensure  => installed,
-  require => Exec['update packages']
+# exec { 'Make file':
+# path    => '/usr/bin',
+# command => 'echo "Hello World!" > /var/www/html/index.html'
+# }
+
+file { '/var/www/html/index.html':
+mode    => '0755',
+content => 'Hello World!',
 }
 
--> file_line { 'Add redirection, 301':
-  ensure => 'present',
-  path   => '/etc/nginx/sites-available/default',
-  after  => 'listen 80 default_server;',
-  line   => '$redirect',
+file {'/var/www/html/error404.html':
+mode    => '0755',
+content => "Ceci n'est pas une page",
 }
 
--> file_line { 'Set X-Served-By header':
-  ensure => 'present',
-  path   => '/etc/nginx/sites-available/default',
-  after  => 'listen 80 default_server;',
-  line   => $custom_header,
+exec { 'block server':
+path    => '/usr/bin',
+command => 'echo "
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+	root /var/www/html;
+	index index.html index.htm index.nginx-debian.html;
+
+	add_header X-Served-By \$hostname;
+
+	error_page 404 /error404.html;
+	location = /error404.html {
+		root /var/www/html;
+		internal;
+	}
+
+	location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+	}
+}" | sudo tee /etc/nginx/sites-available/default'
 }
 
--> file { '/var/www/html/index.html':
-  ensure  => 'present',
-  content => 'Hello World!',
-}
--> service { 'nginx':
-  ensure  => running,
-  require => Package['nginx'],
+exec { 'Restart nginx':
+path    => '/usr/bin',
+command => 'sudo service nginx restart',
 }
