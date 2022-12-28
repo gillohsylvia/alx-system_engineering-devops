@@ -12,5 +12,5 @@ Ever wonder how Facebook, Linkedin, Twitter and other web giants are handling su
 
 
 ## concepts
-Load-balancing https://www.thegeekstuff.com/2016/01/load-balancer-intro/ 
-Load-balancing algorithms  https://community.f5.com/t5/technical-articles/intro-to-load-balancing-for-developers-ndash-the-algorithms/ta-p/273759
+* Load-balancing https://www.thegeekstuff.com/2016/01/load-balancer-intro/ 
+* Load-balancing algorithms  https://community.f5.com/t5/technical-articles/intro-to-load-balancing-for-developers-ndash-the-algorithms/ta-p/273759
