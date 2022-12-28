@@ -78,4 +78,14 @@ If a piece of Software isn’t behaving as expected, it can obviously be because
 # Debugging is fun
 Debugging can be frustrating, but it will definitely be part of your job, it requires experience and methodology to become good at it. The good news is that bugs are never going away, and the more experienced you become, trickier bugs will be assigned to you! Good luck :)
 
+# What is Docker and why is it so darn popular?
 
+https://www.zdnet.com/article/what-is-docker-and-why-is-it-so-darn-popular/
+
+# Network basics
+Networking is a big part of what made computers so powerful and why the Internet exists. It allows machines to communicate with each other.
+
+* What is a protocol https://www.techtarget.com/searchnetworking/definition/protocol
+* What is an IP address https://computer.howstuffworks.com/internet/basics/what-is-an-ip-address.htm
+* What is TCP/IP https://www.techtarget.com/searchnetworking/definition/TCP-IP
+* What is an Internet Protocol (IP) port? https://www.lifewire.com/port-numbers-on-computer-networks-817939
