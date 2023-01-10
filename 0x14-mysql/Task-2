@@ -18,9 +18,8 @@ mysql -uholberton_user -p -e "SHOW GRANTS FOR 'holberton_user'@'localhost'"
 
 Enter password: "projectcorrection280hbtn"
 
-+-----------------------------------------------------------------+
-| Grants for holberton_user@localhost                             |
-+-----------------------------------------------------------------+
-| GRANT REPLICATION CLIENT ON *.* TO 'holberton_user'@'localhost' |
-+-----------------------------------------------------------------+
-
++----+-------+
+| id | name  |
++----+-------+
+|  1 | Leon  |
++----+-------+
