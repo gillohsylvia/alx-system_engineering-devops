@@ -10,7 +10,12 @@ For example, a firewall might be configured to block all incoming traffic except
 
 Overall, firewalls are an important security measure that can help protect your network or computer system from attacks and unauthorized access.
 
+### How To Set Up a Firewall with UFW on Ubuntu 20.04
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-20-04
+### How to manage and forward ports with UFW on Ubuntu 18.04
+https://www.arubacloud.com/tutorial/how-to-manage-and-forward-ports-with-ufw-on-ubuntu-18-04.aspx
+### Linux firewall tutorial
 
-
-
++ https://youtu.be/XtRXm4FFK7Q
++ https://www.youtube.com/watch?v=-CzvPjZ9hp8
 
