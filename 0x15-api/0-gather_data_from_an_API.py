@@ -1,21 +1,21 @@
 #!/usr/bin/python3
 '''Returns information about an employee's TODO list progress'''
- 
+
 from requests import get
 from sys import argv
- 
- 
+
+
 def todo(emp_id):
     '''Send request for employee's to do list to API'''
     total = 0
     completed = 0
     url_user = 'https://jsonplaceholder.typicode.com/users/'
     url_todo = 'https://jsonplaceholder.typicode.com/todos/'
-
-     # check if user exists
-     #step1: send get request to retrieve information using user Id passed as arg
+# check if user exists
+# step1:send get request to retrieve information
+# using user Id pased as arg
     user = get(url_user + emp_id).json().get('name')
- 
+
     if user:
         params = {'userId': emp_id}
         # checks on the total available tasks
@@ -32,6 +32,8 @@ def todo(emp_id):
             if task.get('completed') is True:
                 print("\t {}".format(task.get('title')))
 
+
 if __name__ == '__main__':
+
     if len(argv) > 1:
         todo(argv[1])
