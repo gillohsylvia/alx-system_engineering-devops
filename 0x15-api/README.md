@@ -21,3 +21,11 @@ This is a perfect example of a task that is not suited for Bash scripting, so le
 + The GET Request https://realpython.com/python-requests/#the-get-request
 + Requests: HTTP for Humans https://docs.python-requests.org/en/latest/
 + API vs REST API Simplified: 6 Critical Differences  https://hevodata.com/learn/api-vs-rest-api/
++ REST, SOAP, GraphQL – Basics & Differences Between APIs https://www.techtic.com/blog/comprehensive-guide-to-soap-rest-graphql-web-protocols/
++ Names and Python Syntax https://www.cs.williams.edu/~jannen/teaching/f16/cs135/lectures/lecture.27.pdf
++ Friends don’t let friends program in shell script https://www.turnkeylinux.org/blog/friends-dont-let-friends-program-shell-script
++ What is an API https://www.webopedia.com/definitions/api/
++ What is an API? In English, please https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/
++ What is a REST API https://www.sitepoint.com/rest-api/
++ What are microservices https://smartbear.com/solutions/microservices/
++ PEP8 Python style - having a clean code respecting style guide is really appreciated in the industry https://peps.python.org/pep-0008/
