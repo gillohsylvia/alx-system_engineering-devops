@@ -1,4 +1,4 @@
-# This Puppet script will replace a line in a file on a server
+# This Puppet script will replace a line in a file on a apache server
 
 $file_to_edit = '/var/www/html/wp-settings.php'
 
