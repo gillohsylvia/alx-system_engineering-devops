@@ -1,7 +1,7 @@
 # 0x00. Shell, basics
 
 Concepts
-For this project, we expect you to look at this concept:
+[For this project, we expect you to look at this concept:](concept.md)
 
 Struggling with the sandbox? Try this: Using Docker & WSL on your local host
 
