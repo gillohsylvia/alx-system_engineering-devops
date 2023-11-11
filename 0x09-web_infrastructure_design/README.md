@@ -1,12 +1,12 @@
 # 0x09. Web infrastructure design
 # Concepts
 For this project, we expect you to look at these concepts:
-* DNS
-* Monitoring
-* Web Server
-* Network basics
-* Load balancer
-* Server
+* [DNS](concept1.md)
+* [Monitoring](concept2.md)
+* [Web Server](concept3.md)
+* [Network basics](concept4.md)
+* [Load balancer](concept5.md)
+* [Server](concept6.md)
 # Resources
 * [What is a database](https://www.oracle.com/ke/database/what-is-database/)
 * [What’s the difference between a web server and an app server?](https://www.infoworld.com/article/2077354/app-server-web-server-what-s-the-difference.html)
